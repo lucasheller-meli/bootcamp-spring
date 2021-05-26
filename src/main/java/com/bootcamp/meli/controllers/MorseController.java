@@ -2,9 +2,7 @@ package com.bootcamp.meli.controllers;
 
 import com.bootcamp.meli.services.CodigoMorse;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MorseController {
@@ -16,7 +14,13 @@ public class MorseController {
     }
 
     @GetMapping(value = "/morse/{codigo}")
-    public ResponseEntity<String> numeroRomano(@PathVariable final String codigo){
+    public ResponseEntity<String> morsePortugues(@PathVariable final String codigo){
         return ResponseEntity.ok(codigoMorse.traduzirMorse(codigo));
     }
+
+    @GetMapping(value = "/morse/portugues/{frase}")
+    public ResponseEntity<String> portuguesMorse(@PathVariable final String frase){
+        return ResponseEntity.ok(codigoMorse.traduzirPortugues(frase));
+    }
+
 }
