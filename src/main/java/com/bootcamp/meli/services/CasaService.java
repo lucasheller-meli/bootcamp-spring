@@ -17,27 +17,24 @@ public class CasaService {
     public CasaResponse verificarCasa(Casa casa) {
 
         final HashMap<String, Float> metrosPorComodo = new HashMap();
-        casa.getComodos().forEach(c -> {
-            metrosPorComodo.put(c.getNome(), c.getComprimento() * c.getLargura());
-        });
+        casa.getComodos().forEach(c -> metrosPorComodo.put(c.getNome(), c.getComprimento() * c.getLargura()));
 
-        final List<Float> metrosQuadrados = casa.getComodos()
+        final List<Float> metrosQuadradosComodos = casa.getComodos()
                 .stream()
                 .map(c -> (c.getComprimento() * c.getLargura())).collect(Collectors.toList());
 
-
-        var total = metrosQuadrados.stream().mapToDouble(Float::doubleValue).sum();
+        final var areaTotal = metrosQuadradosComodos.stream().mapToDouble(Float::doubleValue).sum();
 
         return CasaResponse.builder()
-                .valorDaCasa(total * 800)
-                .totalMetrosQuadrados(total)
+                .valorDaCasa(areaTotal * 800)
+                .totalMetrosQuadrados(areaTotal)
                 .metrosPorComodo(metrosPorComodo)
-                .maiorComodo(maiorComodo(metrosPorComodo, Collections.max(metrosQuadrados)))
+                .maiorComodo(verificaMaiorComodo(metrosPorComodo, Collections.max(metrosQuadradosComodos)))
                 .build();
 
     }
 
-    private String maiorComodo(HashMap<String, Float> metrosPorComodo, Float areaMaiorComodo) {
+    private String verificaMaiorComodo(HashMap<String, Float> metrosPorComodo, Float areaMaiorComodo) {
         var maiorComodo = "";
         for (Map.Entry<String, Float> entry : metrosPorComodo.entrySet()) {
             if (entry.getValue().equals(areaMaiorComodo))
