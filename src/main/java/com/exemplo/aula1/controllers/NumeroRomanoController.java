@@ -1,6 +1,6 @@
-package com.exemplo.controller;
+package com.exemplo.aula1.controllers;
 
-import com.exemplo.services.NumeroRomanoService;
+import com.exemplo.aula1.services.NumeroRomanoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

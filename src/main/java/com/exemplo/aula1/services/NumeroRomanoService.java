@@ -1,4 +1,4 @@
-package com.exemplo.services;
+package com.exemplo.aula1.services;
 
 import org.springframework.stereotype.Service;
 

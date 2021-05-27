@@ -1,6 +1,6 @@
-package com.exemplo.controller;
+package com.exemplo.aula1.controllers;
 
-import com.exemplo.services.CodigoMorse;
+import com.exemplo.aula1.services.CodigoMorse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
