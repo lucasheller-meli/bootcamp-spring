@@ -1,3 +1,17 @@
+buildscript{
+	ext{
+		//springBootVersion = '2.4.3'
+		springFoxVersion = '2.9.1'
+		lombokVersion = '1.18.12'
+	}
+	repositories{
+		mavenCentral()
+	}
+	dependencies {
+		//classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.5.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -17,6 +31,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-json'
+
+
+	compileOnly("org.projectlombok:lombok:${lombokVersion}")
+	annotationProcessor(group: 'org.projectlombok',name:'lombok', version:lombokVersion)
+
+	//Swagger
+	implementation(group: 'io.springfox', name: 'springfox-swagger-ui', version: springFoxVersion)
+	implementation(group: 'io.springfox', name: 'springfox-swagger2', version: springFoxVersion)
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

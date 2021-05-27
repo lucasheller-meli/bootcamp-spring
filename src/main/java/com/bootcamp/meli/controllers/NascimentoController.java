@@ -18,7 +18,7 @@ public class NascimentoController {
     }
 
     @GetMapping(value = "/{dia}/{mes}/{ano}")
-    public ResponseEntity<Integer> verificaIdade(@PathVariable final Integer dia, @PathVariable final Integer mes, @PathVariable final Integer ano) {
+    public ResponseEntity<String> verificaIdade(@PathVariable final Integer dia, @PathVariable final Integer mes, @PathVariable final Integer ano) {
 
         return ResponseEntity.ok(nascimentoService.calculaIdade(LocalDate.of(ano, mes, dia)));
     }

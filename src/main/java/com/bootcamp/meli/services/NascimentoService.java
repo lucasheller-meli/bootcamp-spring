@@ -8,9 +8,9 @@ import java.time.Period;
 @Service
 public class NascimentoService {
 
-    public Integer calculaIdade(LocalDate nascimento) {
+    public String calculaIdade(LocalDate nascimento) {
         final LocalDate agora = LocalDate.now();
         final Period diff = Period.between(agora, nascimento);
-        return diff.getYears();
+        return String.valueOf(diff.getYears());
     }
 }
