@@ -1,8 +1,8 @@
-package com.bootcamp.meli.controllers;
+package com.bootcamp.meli.aula2.controllers;
 
-import com.bootcamp.meli.controllers.response.CasaResponse;
-import com.bootcamp.meli.entities.Casa;
-import com.bootcamp.meli.services.CasaService;
+import com.bootcamp.meli.aula2.controllers.response.CasaResponse;
+import com.bootcamp.meli.aula2.entities.Casa;
+import com.bootcamp.meli.aula2.services.CasaService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

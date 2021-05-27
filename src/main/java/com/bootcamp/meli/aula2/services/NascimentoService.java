@@ -1,4 +1,4 @@
-package com.bootcamp.meli.services;
+package com.bootcamp.meli.aula2.services;
 
 import org.springframework.stereotype.Service;
 

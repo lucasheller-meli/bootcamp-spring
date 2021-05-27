@@ -1,6 +1,6 @@
-package com.bootcamp.meli.controllers;
+package com.bootcamp.meli.aula1.controller;
 
-import com.bootcamp.meli.services.CodigoMorse;
+import com.bootcamp.meli.aula1.services.CodigoMorse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

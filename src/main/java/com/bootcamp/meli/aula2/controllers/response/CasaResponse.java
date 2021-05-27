@@ -1,4 +1,4 @@
-package com.bootcamp.meli.controllers.response;
+package com.bootcamp.meli.aula2.controllers.response;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.bootcamp.meli.services;
+package com.bootcamp.meli.aula2.services;
 
-import com.bootcamp.meli.controllers.response.CasaResponse;
-import com.bootcamp.meli.entities.Casa;
+import com.bootcamp.meli.aula2.controllers.response.CasaResponse;
+import com.bootcamp.meli.aula2.entities.Casa;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;

@@ -1,5 +1,6 @@
-package com.bootcamp.meli.entities;
+package com.bootcamp.meli.aula2.entities;
 
+import com.bootcamp.meli.aula2.entities.Comodos;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

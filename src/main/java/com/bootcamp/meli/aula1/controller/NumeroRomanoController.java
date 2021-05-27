@@ -1,6 +1,6 @@
-package com.bootcamp.meli.controllers;
+package com.bootcamp.meli.aula1.controller;
 
-import com.bootcamp.meli.services.NumeroRomanoService;
+import com.bootcamp.meli.aula1.services.NumeroRomanoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
