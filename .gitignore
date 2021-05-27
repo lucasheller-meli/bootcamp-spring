@@ -295,4 +295,15 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### Gradle ###
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,intellij+all,intellij,intellij+iml,java,java-web,code-java
