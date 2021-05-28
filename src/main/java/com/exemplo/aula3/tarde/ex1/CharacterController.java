@@ -1,2 +1,4 @@
-package com.exemplo.aula3.tarde.ex1;public class CharacterController {
+package com.exemplo.aula3.tarde.ex1;
+
+public class CharacterController {
 }
