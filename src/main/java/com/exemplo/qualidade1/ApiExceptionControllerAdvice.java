@@ -13,13 +13,13 @@ import java.util.Map;
 @RestControllerAdvice
 public class ApiExceptionControllerAdvice {
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> handleMethodArgumentNotValidException(MethodArgumentNotValidException methodArgumentNotValidException) {
+    public ResponseEntity<ApiError> handleMethodArgumentNotValidException(MethodArgumentNotValidException methodArgumentNotValidException) {
         Map<String, String> errors = new HashMap<>();
         methodArgumentNotValidException.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
             errors.put(fieldName, errorMessage);
         });
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiError.builder().errors(errors).build());
     }
 }
