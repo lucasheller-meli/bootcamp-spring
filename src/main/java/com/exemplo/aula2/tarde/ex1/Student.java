@@ -1,14 +1,17 @@
 package com.exemplo.aula2.tarde.ex1;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.List;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class Student {
 
@@ -16,5 +19,6 @@ public class Student {
     @Pattern(regexp = "[A-z]*", message = "Deve conter somente letra A-Z.")
     private String name;
     @Valid
+    @NotEmpty
     private List<Subject> subjects;
 }
