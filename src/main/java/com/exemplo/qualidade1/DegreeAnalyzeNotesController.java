@@ -1,4 +1,4 @@
-package com.exemplo.qualidade1.manha;
+package com.exemplo.qualidade1;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.exemplo.qualidade1.manha;
+package com.exemplo.qualidade1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
